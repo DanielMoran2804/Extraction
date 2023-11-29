@@ -1,0 +1,7 @@
+const muestra = Field("Muestra");
+const rutaImagen = muestra.toString();
+const partesRuta = rutaImagen.split("/");
+const nombreImagen = partesRuta.pop();
+const nuevaUbicacion = "C:\\Users\\MORANDA\\OneDrive - Caterpillar\\Pictures\\" + nombreImagen;
+const rutaNuevaImagen = rutaImagen.replace(partesRuta.join("/") + "/", nuevaUbicacion);
+Field("URL Image").value = rutaNuevaImagen;
